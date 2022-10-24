@@ -1,0 +1,135 @@
+$prime: #f92e2e;
+
+.main {
+    min-height: 100vh;
+}
+
+.header {
+    position: relative;
+    background-color: $prime;
+    color: black;
+    min-height: 40vh;
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+}
+
+.header::after {
+  position: absolute;
+  content: '| De - Movers |';
+  font-family: Sans-Serif;
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  inset-inline-start: 4%;
+}
+
+.nav {
+    padding-inline-end: 1.6em;
+    padding-block-start: 3.4em;
+    div {
+        display: flex;
+        justify-content: flex-end;
+        gap: 1em;
+        a {
+            font-size: 1.213em;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: Sans-Serif;
+            color: white;
+        }
+    }
+}
+
+/* the button in the header */
+.btn {
+  position: absolute;
+  font-size: 1.4em;
+  font-family: Sans-Serif;
+  inset-inline-start: 60%;
+  inset-block-start: 9em;
+  z-index: 1;
+  
+  a {
+    text-decoration: none;
+    color: $prime;
+    background-color: white;
+    border: solid .113em $prime;
+    border-radius: 1.5em;
+    padding-inline: .8em;
+    padding-block: .2em;
+  }
+}
+
+.midsection {
+    min-height: 20em;
+    .motto {
+      .txt {
+        text-align: center;
+        font-family: Sans-Serif;
+        font-size: 1.3em;
+        font-weight: bold;
+        color: $prime;
+      }
+    }
+    
+    .whatwedo {
+      padding: .8em;
+      background-color: #fa5b5b;
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: 20em;
+      overflow-x: auto;
+      gap: 1em;
+    }
+    
+    @keyframes wedo {
+      0% {
+        transform: translateX(0);
+      }
+      20% {
+        transform: translateX(-100%);
+      }
+      40% {
+        transform: translateX(-200%);
+      }
+      60% {
+        transform: translateX(-300%);
+      }
+      80% {
+        transform: translateX(-0%);
+      }
+      100% {
+        transform: translateX(0%);
+      }
+    }
+}
+
+.wavecon {
+  .svg {
+    display: block;
+  }
+}
+
+.siscom {
+  display: flex;
+  justify-content: center;
+  gap: 1.5em;
+  background-color: $prime;
+  font-family: Sans-Serif;
+  font-size: 1.3em;
+  font-weight: bold;
+  
+  .name {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.copy {
+  background-color: $prime;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  padding: 1em;
+  font-family: Sans-Serif;
+}
